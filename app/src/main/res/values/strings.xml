@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RandomUserMe</string>
+    <string name="firstNameTextView">FirstName</string>
+    <string name="lastNameTextView">LastName</string>
+    <string name="pictureImageView">Picture</string>
+    <string name="reset_datas">Reset datas</string>
+    <string name="add_datas">Add datas</string>
+</resources>
