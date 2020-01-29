@@ -2,7 +2,12 @@
     <string name="app_name">RandomUserMe</string>
     <string name="firstNameTextView">FirstName</string>
     <string name="lastNameTextView">LastName</string>
-    <string name="pictureImageView">Picture</string>
-    <string name="reset_datas">Reset datas</string>
-    <string name="add_datas">Add datas</string>
+    <string name="pictureImageView">ThumbnailPicture</string>
+    <string name="profileImageView">Picture</string>
+    <string name="resetData">Reset Data</string>
+    <string name="addData">Add Data</string>
+    <string name="addressTextView">Address</string>
+    <string name="emailTextView">Email</string>
+    <string name="birthDateTextView">Birth Date</string>
+    <string name="returnButton">return</string>
 </resources>
