@@ -3,6 +3,7 @@ package com.canark.randomUser.recyclerview;
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.motion.widget.Debug
 import androidx.recyclerview.widget.RecyclerView
 import com.canark.randomUser.R
 import com.canark.randomUser.model.Results
@@ -17,7 +18,8 @@ class UserAdapter(private val myDataset: MutableList<Results>, val clickListener
         val _firstName = itemView.item_user_firstName
         val _lastName = itemView.item_user_lastName
         val _picture = itemView.item_user_thumbnail
-        val _age = itemView.birthDateTextView
+        val _birthDate = itemView.birthDateTextView
+        val _age = itemView.ageTextView
         val _address = itemView.addressTextView
         val _profileImage = itemView.profileImageView
         val _phone =  itemView.ageTextView
@@ -26,6 +28,7 @@ class UserAdapter(private val myDataset: MutableList<Results>, val clickListener
             _firstName.text = result.name.first
             _lastName.text = result.name.first
             _picture.contentDescription = result.picture.thumbnail
+            _birthDate.text = result.dob.date
             _age.text = result.dob.age.toString()
             _address.text = result.location.country
             _profileImage.contentDescription = result.picture.medium

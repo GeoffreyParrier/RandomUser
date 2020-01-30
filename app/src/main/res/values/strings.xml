@@ -7,7 +7,7 @@
     <string name="resetData">Reset Data</string>
     <string name="addData">Add Data</string>
     <string name="addressTextView">Address</string>
-    <string name="emailTextView">Email</string>
+    <string name="ageTextView">Age</string>
     <string name="birthDateTextView">Birth Date</string>
     <string name="returnButton">return</string>
 </resources>

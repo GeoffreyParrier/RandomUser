@@ -1,15 +1,11 @@
 package com.canark.randomUser.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Debug
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.canark.randomUser.R
 import com.canark.randomUser.model.RandomUsersResults
@@ -19,9 +15,8 @@ import com.canark.randomUser.network.ApiHelpers
 import com.canark.randomUser.network.ApiRequestCallback
 import com.canark.randomUser.recyclerview.UserAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_user.*
-import java.io.Console
-import java.util.function.UnaryOperator
+
+const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 
 
 class MainActivity : AppCompatActivity() {
@@ -163,5 +158,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun userItermClicked(user: Results) {
         Toast.makeText(this, "test", Toast.LENGTH_LONG).show()
+
+        val profileImage = user.picture.medium
+        val firstName = user.name.first
+        val lastName = user.name.last
+        val birthDate = user.dob.date
+        val email = user.email
+        val address = user.location.country
+
+        val intent = Intent(this, ShowProfileActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, profileImage)
+            putExtra(EXTRA_MESSAGE, firstName)
+            putExtra(EXTRA_MESSAGE, lastName)
+            putExtra(EXTRA_MESSAGE, birthDate)
+            putExtra(EXTRA_MESSAGE, email)
+            putExtra(EXTRA_MESSAGE, address)
+        }
+        startActivity(intent)
     }
 }
